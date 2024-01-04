@@ -1,0 +1,522 @@
+openapi: 3.0.0
+info:
+  title: Har2Postman
+  version: 1.0.0
+servers:
+  - url: https://komarbe.ulbi.ac.id
+  - url: http://127.0.0.1:5000
+paths:
+  /biodata/jalur:
+    post:
+      tags:
+        - General
+      summary: POST /biodata/jalur successfully
+      requestBody:
+        content: {}
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: LOGIN
+          in: header
+          schema:
+            type: string
+          example: >-
+            v4.public.eyJkYXRhIjp7ImlkX3BlbmRhZnRhciI6ODMsImlkX2Jpb2RhdGEiOiIiLCJwaG9uZV9udW1iZXIiOiIwODEyMjIyMTgxNDMiLCJlbWFpbCI6ImluZHJhYWphQHVsYmkuYWMuaWQiLCJmdWxsX25hbWUiOiJJbmRyYSBVeSJ9LCJleHAiOiIyMDIzLTExLTMwVDA5OjAyOjMyKzA3OjAwIiwiaWF0IjoiMjAyMy0xMS0zMFQwNzowMjozMiswNzowMCIsImlkIjoiMDgxMjIyMjE4MTQzIiwibmJmIjoiMjAyMy0xMS0zMFQwNzowMjozMiswNzowMCJ9gXlkGiU1PAZsSEc73jbH2o-CJpp14tpcMMlGEzEaPbLmpEAu2DPLULlSx5DqbEAPVSfSKzPYb17uFVk36qF4AQ
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /prodi/delete:
+    delete:
+      tags:
+        - General
+      summary: 'DELETE /prodi/delete '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '90'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /prodi/put:
+    put:
+      tags:
+        - General
+      summary: 'PUT /prodi/put '
+      requestBody:
+        content: {}
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '90'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /prodi/post:
+    post:
+      tags:
+        - General
+      summary: 'POST /prodi/post '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /prodi/get:
+    get:
+      tags:
+        - General
+      summary: 'GET /prodi/get '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '14'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /prodi:
+    get:
+      tags:
+        - General
+      summary: 'GET /prodi '
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /fakultas/put:
+    put:
+      tags:
+        - General
+      summary: 'PUT /fakultas/put '
+      requestBody:
+        content: {}
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '4'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /fakultas/delete:
+    delete:
+      tags:
+        - General
+      summary: 'DELETE /fakultas/delete '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '4'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /fakultas/post:
+    post:
+      tags:
+        - General
+      summary: 'POST /fakultas/post '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /fakultas/get:
+    get:
+      tags:
+        - General
+      summary: 'GET /fakultas/get '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '2'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /fakultas:
+    get:
+      tags:
+        - General
+      summary: 'GET /fakultas '
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /jalur/put:
+    put:
+      tags:
+        - General
+      summary: 'PUT /jalur/put '
+      requestBody:
+        content: {}
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '4'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /jalur/delete:
+    delete:
+      tags:
+        - General
+      summary: 'DELETE /jalur/delete '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '6'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /jalur/post:
+    post:
+      tags:
+        - General
+      summary: 'POST /jalur/post '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /jalur/get:
+    get:
+      tags:
+        - General
+      summary: 'GET /jalur/get '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '4'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /jalur:
+    get:
+      tags:
+        - General
+      summary: 'GET /jalur '
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/delete:
+    delete:
+      tags:
+        - General
+      summary: 'DELETE /admin/delete '
+      parameters:
+        - name: id_admin
+          in: query
+          schema:
+            type: integer
+          example: '8'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/put:
+    put:
+      tags:
+        - General
+      summary: 'PUT /admin/put '
+      requestBody:
+        content: {}
+      parameters:
+        - name: id_admin
+          in: query
+          schema:
+            type: integer
+          example: '8'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/post:
+    post:
+      tags:
+        - General
+      summary: 'POST /admin/post '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin/get:
+    get:
+      tags:
+        - General
+      summary: 'GET /admin/get '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '2'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin:
+    get:
+      tags:
+        - General
+      summary: 'GET /admin '
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin_level/delete:
+    delete:
+      tags:
+        - General
+      summary: 'DELETE /admin_level/delete '
+      parameters:
+        - name: id_level
+          in: query
+          schema:
+            type: integer
+          example: '4'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin_level/put:
+    put:
+      tags:
+        - General
+      summary: 'PUT /admin_level/put '
+      requestBody:
+        content: {}
+      parameters:
+        - name: id_level
+          in: query
+          schema:
+            type: integer
+          example: '44'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin_level/post:
+    post:
+      tags:
+        - General
+      summary: 'POST /admin_level/post '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin_level/get:
+    get:
+      tags:
+        - General
+      summary: 'GET /admin_level/get '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '22'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /admin_level:
+    get:
+      tags:
+        - General
+      summary: 'GET /admin_level '
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /pendaftar/pendaftar:
+    get:
+      tags:
+        - General
+      summary: 'GET /pendaftar/pendaftar '
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /pendaftar/pendaftar/get:
+    get:
+      tags:
+        - General
+      summary: 'GET /pendaftar/pendaftar/get '
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: integer
+          example: '57'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /wilayah-kota/getidprovnmkota:
+    post:
+      tags:
+        - General
+      summary: 'POST /wilayah-kota/getidprovnmkota '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /wilayah-kota/getidprov:
+    post:
+      tags:
+        - General
+      summary: 'POST /wilayah-kota/getidprov '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /wilayah-kota/get:
+    get:
+      tags:
+        - General
+      summary: 'GET /wilayah-kota/get '
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /wilayah-provinsi/getnama:
+    post:
+      tags:
+        - General
+      summary: 'POST /wilayah-provinsi/getnama '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /wilayah-provinsi/get:
+    get:
+      tags:
+        - General
+      summary: 'GET /wilayah-provinsi/get '
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /sekolah:
+    post:
+      tags:
+        - General
+      summary: 'POST /sekolah '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /pendaftar/login/email:
+    post:
+      tags:
+        - General
+      summary: POST /pendaftar/login/email successfully
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /pendaftar/decrypt:
+    post:
+      tags:
+        - General
+      summary: 'POST /pendaftar/decrypt '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /pendaftar/daftar:
+    post:
+      tags:
+        - General
+      summary: 'POST /pendaftar/daftar '
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
