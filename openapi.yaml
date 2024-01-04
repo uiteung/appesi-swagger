@@ -1,9 +1,9 @@
 openapi: 3.0.0
 info:
-  title: Sidang P3
+  title: APPESI
   version: 1.0.0
 servers:
-  - url: 'http://127.0.0.1:8080'
+  - url: http://127.0.0.1:8080
 components:
   securitySchemes:
     bearerAuth:
@@ -34,6 +34,34 @@ paths:
             type: string
           example: >-
             v4.public.eyJleHAiOiIyMDI0LTAxLTA0VDEyOjM4OjU0KzA3OjAwIiwiaWF0IjoiMjAyNC0wMS0wNFQxMDozODo1NCswNzowMCIsImlkIjoiNjI4NTE1Njc2ODcxMyIsIm5iZiI6IjIwMjQtMDEtMDRUMTA6Mzg6NTQrMDc6MDAifYRTpMMplJ22l8mdmAO8IEsavsJ__LkZbODKgl7igCsGIfjnmZ4XDVC2ogxxrlvPJ5jM995gMzfUFqjuj1syuQ0
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - General
+      summary: Edit FE
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                npm: 1214017
+                namamhs: Data Edit
+                jsdelivr: 22
+                jsmodule: 22
+                kelengkapan_css: 22
+                customdomain: 22
+      parameters:
+        - name: AUTH
+          in: header
+          schema:
+            type: string
+          example: >-
+            v4.public.eyJleHAiOiIyMDI0LTAxLTA0VDE3OjUyOjQ3KzA3OjAwIiwiaWF0IjoiMjAyNC0wMS0wNFQxNTo1Mjo0NyswNzowMCIsImlkIjoiNjI4NTE1Njc2ODcxMyIsIm5iZiI6IjIwMjQtMDEtMDRUMTU6NTI6NDcrMDc6MDAifYw7oWpYHN-bT-x5X_L-iAHIxvm9wUb6zjsp5ijRO40z3BWV3gRiu8ZQLGo0gjAvnLxbyb2G7SOkuYG2_Orkpgc
       responses:
         '200':
           description: Successful response
@@ -74,6 +102,21 @@ paths:
           content:
             application/json: {}
   /api/sidang/backend:
+    delete:
+      tags:
+        - General
+      summary: Delete BE By NPM
+      parameters:
+        - name: npm
+          in: query
+          schema:
+            type: integer
+          example: '353535353'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
     post:
       tags:
         - General
