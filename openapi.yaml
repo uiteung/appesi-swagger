@@ -85,6 +85,27 @@ paths:
           description: Successful response
           content:
             application/json: {}
+    delete:
+      tags:
+        - General
+      summary: Delete FE By NPM
+      parameters:
+        - name: AUTH
+          in: header
+          schema:
+            type: string
+          example: >-
+            v4.public.eyJleHAiOiIyMDI0LTAxLTA0VDE3OjUyOjQ3KzA3OjAwIiwiaWF0IjoiMjAyNC0wMS0wNFQxNTo1Mjo0NyswNzowMCIsImlkIjoiNjI4NTE1Njc2ODcxMyIsIm5iZiI6IjIwMjQtMDEtMDRUMTU6NTI6NDcrMDc6MDAifYw7oWpYHN-bT-x5X_L-iAHIxvm9wUb6zjsp5ijRO40z3BWV3gRiu8ZQLGo0gjAvnLxbyb2G7SOkuYG2_Orkpgc
+        - name: npm
+          in: query
+          schema:
+            type: integer
+          example: '353535353'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
   /api/sidang/frontend/get:
     get:
       tags:
@@ -102,21 +123,6 @@ paths:
           content:
             application/json: {}
   /api/sidang/backend:
-    delete:
-      tags:
-        - General
-      summary: Delete BE By NPM
-      parameters:
-        - name: npm
-          in: query
-          schema:
-            type: integer
-          example: '353535353'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
     post:
       tags:
         - General
@@ -138,10 +144,66 @@ paths:
           description: Successful response
           content:
             application/json: {}
+    put:
+      tags:
+        - General
+      summary: Edit BE
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                npm: 1214022
+                nama_mhs: Rofi Nafiis EDIT
+                auth_token: 20
+                be_package: 10
+                gcf_node: 10
+                integrasi_wauth: 10
+      parameters:
+        - name: AUTH
+          in: header
+          schema:
+            type: string
+          example: >-
+            v4.public.eyJleHAiOiIyMDI0LTAxLTA0VDE3OjUyOjQ3KzA3OjAwIiwiaWF0IjoiMjAyNC0wMS0wNFQxNTo1Mjo0NyswNzowMCIsImlkIjoiNjI4NTE1Njc2ODcxMyIsIm5iZiI6IjIwMjQtMDEtMDRUMTU6NTI6NDcrMDc6MDAifYw7oWpYHN-bT-x5X_L-iAHIxvm9wUb6zjsp5ijRO40z3BWV3gRiu8ZQLGo0gjAvnLxbyb2G7SOkuYG2_Orkpgc
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
     get:
       tags:
         - General
       summary: Get BE All
+      parameters:
+        - name: AUTH
+          in: header
+          schema:
+            type: string
+          example: >-
+            v4.public.eyJleHAiOiIyMDI0LTAxLTA0VDE3OjUyOjQ3KzA3OjAwIiwiaWF0IjoiMjAyNC0wMS0wNFQxNTo1Mjo0NyswNzowMCIsImlkIjoiNjI4NTE1Njc2ODcxMyIsIm5iZiI6IjIwMjQtMDEtMDRUMTU6NTI6NDcrMDc6MDAifYw7oWpYHN-bT-x5X_L-iAHIxvm9wUb6zjsp5ijRO40z3BWV3gRiu8ZQLGo0gjAvnLxbyb2G7SOkuYG2_Orkpgc
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - General
+      summary: Delete BE By NPM
+      parameters:
+        - name: AUTH
+          in: header
+          schema:
+            type: string
+          example: >-
+            v4.public.eyJleHAiOiIyMDI0LTAxLTA0VDE3OjUyOjQ3KzA3OjAwIiwiaWF0IjoiMjAyNC0wMS0wNFQxNTo1Mjo0NyswNzowMCIsImlkIjoiNjI4NTE1Njc2ODcxMyIsIm5iZiI6IjIwMjQtMDEtMDRUMTU6NTI6NDcrMDc6MDAifYw7oWpYHN-bT-x5X_L-iAHIxvm9wUb6zjsp5ijRO40z3BWV3gRiu8ZQLGo0gjAvnLxbyb2G7SOkuYG2_Orkpgc
+        - name: npm
+          in: query
+          schema:
+            type: integer
+          example: '1214022'
       responses:
         '200':
           description: Successful response
@@ -152,6 +214,96 @@ paths:
       tags:
         - General
       summary: Get BE By NPM
+      parameters:
+        - name: npm
+          in: query
+          schema:
+            type: integer
+          example: '353535353'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/sidang/persyaratan:
+    post:
+      tags:
+        - General
+      summary: Post Syarat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                npm: 353535353
+                nama_mhs: Cfvgv gb g
+                auth_token: 10
+                be_package: 10
+                gcf_node: 10
+                integrasi_wauth: 10
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - General
+      summary: Edit Syarat
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                npm: 1214022
+                nama_mhs: Rofi Nafiis EDIT
+                auth_token: 20
+                be_package: 10
+                gcf_node: 10
+                integrasi_wauth: 10
+      parameters:
+        - name: AUTH
+          in: header
+          schema:
+            type: string
+          example: >-
+            v4.public.eyJleHAiOiIyMDI0LTAxLTA0VDE3OjUyOjQ3KzA3OjAwIiwiaWF0IjoiMjAyNC0wMS0wNFQxNTo1Mjo0NyswNzowMCIsImlkIjoiNjI4NTE1Njc2ODcxMyIsIm5iZiI6IjIwMjQtMDEtMDRUMTU6NTI6NDcrMDc6MDAifYw7oWpYHN-bT-x5X_L-iAHIxvm9wUb6zjsp5ijRO40z3BWV3gRiu8ZQLGo0gjAvnLxbyb2G7SOkuYG2_Orkpgc
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - General
+      summary: Get Syarat All
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - General
+      summary: Delete Syarat By NPM
+      parameters:
+        - name: npm
+          in: query
+          schema:
+            type: integer
+          example: '353535353'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/sidang/persyaratan/get:
+    get:
+      tags:
+        - General
+      summary: Get Syarat By NPM
       parameters:
         - name: npm
           in: query
