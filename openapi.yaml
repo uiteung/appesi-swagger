@@ -3,7 +3,7 @@ info:
   title: APPESI
   version: 1.0.0
 servers:
-  - url: https://p3-be.ulbi.ac.id
+  - url: 'https://p3-be.ulbi.ac.id'
 components:
   securitySchemes:
     bearerAuth:
